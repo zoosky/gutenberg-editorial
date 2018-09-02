@@ -1,0 +1,19 @@
++++
+layout = "default"
++++
+<!-- Content -->
+<section>
+	<header class="main">
+		<h1>{{ page.title }}</h1>
+	</header>
+	{% if page.wideImage %}
+	<span class="image main"><img src="{{ config.base_url }}/{{ page.wideImage }}" alt="" /></span>
+	{% endif %}
+
+	{% block content %}
+		{{ page.content | safe }}
+
+		{% if page.previous %}Previous article: {{ page.previous.permalink }}{% endif %}
+		{% if page.next %}Next article: {{ page.next.permalink }}{% endif %}
+	{% endblock content %}
+</section>

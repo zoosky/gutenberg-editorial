@@ -1,0 +1,17 @@
+<section id="banner">
+	<div class="content">
+		<header>
+			<h1>{{ config.extra.editorial.bannerTitle }}</h1>
+			<p>{{ config.extra.editorial.bannerTagline }}</p>
+		</header>
+		<p>{{ config.extra.editorial.bannerDescription }}</p>
+		{% if config.extra.editorial.bannerButton == true %}
+		<ul class="actions">
+			<li><a href="{{ config.extra.editorial.bannerButtonLink }}" class="button big">Learn More</a></li>
+		</ul>
+		{% endif %}
+	</div>
+	<span class="image object">
+		<img src="{{ config.extra.editorial.bannerImage }}" alt="" />
+	</span>
+</section>
