@@ -1,9 +1,10 @@
-+++
-layout: default
-+++
+{% extends "default.html" %}
+
 <!-- Banner -->
 {% include "_includes/banner.html" %}
 <!-- Featurette -->
 {% include "_includes/featurette.html" %}
 <!-- Posts -->
-{% include "posts.html" %}
+{% include "_includes/posts.html" %}
+
+{{ __tera_context }}

@@ -3,13 +3,25 @@
 		<h2>Posts</h2>
 	</header>
 	<div class="posts">
-	{% for apost in site.posts %}
+		
+	{% set section = get_section(path="posts/_index.md") %}
+	{% for apost in section.pages %}
 		<article>
-			<a href="{{ get_url(path=apost) }}" class="image"><img src="{{ get_url(path=apost) }}/{{ apost.image }}" alt="" /></a>
-			<h3>{{ apost.title }}</h3>
+			<a href="{{ get_url(path="apost") }}" class="image">
+
+			{% if apost.image %}
+			<img src="{{ get_url(path="apost") }}/{{ apost.image }}" alt="" />
+			{% endif %}
+		</a>
+		{% if apost.title %}
+		<h3>{{ apost.title }}</h3>
+		{% endif %}
+
+			{% if apost.tagline %}
 			<p>{{ apost.tagline }}</p>
+			{% endif %}
 			<ul class="actions">
-				<li><a href="{{ get_url(path=apost) }}" class="button">Learn More</a></li>
+				<li><a href="{{ get_url(path="apost") }}" class="button">Learn More</a></li>
 			</ul>
 		</article>
 	{% endfor %}

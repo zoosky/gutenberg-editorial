@@ -1,5 +1,5 @@
 +++
-layout =  "page"
+template  =  "page.html"
 title =  "Generic"
 wideImage =  "images/pic11.jpg"
 showOnMenu =  true

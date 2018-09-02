@@ -349,10 +349,10 @@
 	}
 
 	///
-	/// Initializes layout module.
+	/// Initializes template  module.
 	/// @param {map} config Config.
 	///
-	@mixin skel-layout($config: ()) {
+	@mixin skel-template ($config: ()) {
 
 		// Config.
 			$configPerBreakpoint: ();

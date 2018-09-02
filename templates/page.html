@@ -1,8 +1,10 @@
 +++
-layout = "default"
+template  = "default"
 +++
 <!-- Content -->
 <section>
+{% if page.title %}
+		
 	<header class="main">
 		<h1>{{ page.title }}</h1>
 	</header>
@@ -11,9 +13,13 @@ layout = "default"
 	{% endif %}
 
 	{% block content %}
+
 		{{ page.content | safe }}
 
 		{% if page.previous %}Previous article: {{ page.previous.permalink }}{% endif %}
 		{% if page.next %}Next article: {{ page.next.permalink }}{% endif %}
 	{% endblock content %}
+	{% endif %}
+
+	{{ __tera_context }}
 </section>

@@ -1,10 +1,9 @@
-+++
-layout: page
-+++
+{% extends "page.html" %}
+
 <article itemscope itemtype="http://schema.org/BlogPosting">
 	<h1>{{ page.title }}</h1>
 	<p>
-		<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+		<time datetime="{{ page.date | date(format="%Y-%m-%d %H:%M") }}" itemprop="datePublished">
 			{{ page.date | date(format = "%b %-d, %Y") }} • 
 		</time>
 		{% if page.author %}
@@ -15,5 +14,5 @@ layout: page
 			</span>
 		{% endif %}
 	</p>
-	{{ content }}
+	{{ __tera_context }}
 </article>

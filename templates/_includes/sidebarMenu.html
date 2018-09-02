@@ -6,7 +6,7 @@
 		<li><a href="{{ config.base_url }}/index.html">Home</a></li>
 		{% for my_page in site.pages %}
 			{% if my_page.showOnMenu == true %}
-				<li><a href="{{ get_url(path=my_page) }}">{{ my_page.title}}</a></li>
+				<li><a href="{{ get_url(path="my_page") }}">{{ my_page.title}}</a></li>
 			{% endif %}
 		{% endfor %}
 		<li>
@@ -14,7 +14,7 @@
 			<ul>
 				{% for a_page in site.pages %}
 					{% if a_page.showOnSubmenu == true %}
-						<li><a href="{{ get_url(path=a_page) }}">{{ a_page.title }}</a></li>
+						<li><a href="{{ get_url(path="a_page") }}">{{ a_page.title }}</a></li>
 					{% endif %}
 				{% endfor %}
 			</ul>

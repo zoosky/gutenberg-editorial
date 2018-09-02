@@ -1,7 +1,7 @@
 +++
-layout: page
-title: Elements
-showOnSubmenu: true
+template  = "page.html"
+title = "Elements"
+showOnSubmenu = true
 +++
 	<!-- Content -->
 	<h2 id="content">Sample Content</h2>
@@ -297,7 +297,7 @@ showOnSubmenu: true
 												<!-- Form -->
 													<h3>Form</h3>
 
-													<form method="post" action="#">
+													<form method="template  =  "post.html" action="#">
 														<div class="row uniform">
 															<div class="6u 12u$(xsmall)">
 																<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />

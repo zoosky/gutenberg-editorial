@@ -3,7 +3,7 @@
 <!-- html5up.net | @ajlkn -->
 <!-- Free for personal and commercial use under the CCA 3.0 license (html5up.net/license) -->
 <html>
-	{% include "head.html" %}
+	{% include "_includes/head.html" %}
 	<body>
 		<!-- Wrapper -->
 		<div id="wrapper">
@@ -11,14 +11,14 @@
 			<div id="main">
 				<div class="inner">
 					<!-- Header -->
-					{% include "header.html" %}
-					{{ content }}
+					{% include "_includes/header.html" %}
+					{{ page.content | safe }}
 				</div>
 			</div>
 			<!-- Sidebar -->
-			{% include "sidebar.html" %}
+			{% include "_includes/sidebar.html" %}
 		</div>
 		<!-- Scripts -->
-		{% include "scripts.html" %}
+		{% include "_includes/scripts.html" %}
 	</body>
 </html>

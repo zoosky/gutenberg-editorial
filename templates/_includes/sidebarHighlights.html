@@ -3,14 +3,14 @@
 		<h2>Featured Posts</h2>
 	</header>
 	<div class="mini-posts">
-	{% for my_post in site.posts %}
+	{% for my_post in section.pages %}
 		{% if my_post.showOnHighlights == true %}
 		<article>
-			<a href="{{ get_url(path=my_post) }}" class="image"><img src="{{ get_url(path=my_post) }}/{{ my_post.image }}" alt="" /></a>
+			<a href="{{ get_url(path="my_post") }}" class="image"><img src="{{ get_url(path="my_post") }}/{{ my_post.image }}" alt="" /></a>
 			<h3>{{ my_post.title }}</h3>
 			<p>{{ my_post.tagline }}</p>
 			<ul class="actions">
-				<li><a href="{{ get_url(path=my_post) }}" class="button">More</a></li>
+				<li><a href="{{ get_url(path="my_post") }}" class="button">More</a></li>
 			</ul>
 		</article>
 		{% endif %}
